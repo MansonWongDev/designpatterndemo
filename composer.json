@@ -1,0 +1,19 @@
+{
+    "name": "mansonwong/designpatterndemo",
+    "description": "design pattern demo",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mansonwong\\Designpatterndemo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WangWenjun",
+            "email": "260945307@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
