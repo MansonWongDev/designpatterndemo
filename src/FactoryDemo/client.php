@@ -7,6 +7,7 @@
  */
 
 
+use Mansonwong\Designpatterndemo\DecoratorDemo\BasicSite;
 use Mansonwong\Designpatterndemo\FactoryDemo\MysqlFactory;
 use Mansonwong\Designpatterndemo\FactoryDemo\PDOFactory;
 
@@ -35,4 +36,6 @@ $db2 = $res2->conn('127.0.0.1','root','wwj449','3306','sjms');
 $r2 = $res2->query("select * from feedback");
 var_dump($r2);
 
+
+$mysite = new BasicSite();
 

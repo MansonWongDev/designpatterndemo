@@ -1,12 +1,4 @@
 <?php
-
-
-use Mansonwong\Designpatterndemo\DecoratorDemo\BasicSite;
-use Mansonwong\Designpatterndemo\DecoratorDemo\BBsDecorator;
-use Mansonwong\Designpatterndemo\DecoratorDemo\IComponent;
-use Mansonwong\Designpatterndemo\DecoratorDemo\PayDecorator;
-use Mansonwong\Designpatterndemo\DecoratorDemo\VideoDecorator;
-
 /**
  * Created by PhpStorm.
  * User: WWJ 260945307@qq.com
@@ -14,6 +6,14 @@ use Mansonwong\Designpatterndemo\DecoratorDemo\VideoDecorator;
  * Time: 12:21
  */
 
+use Mansonwong\Designpatterndemo\DecoratorDemo\BasicSite;
+use Mansonwong\Designpatterndemo\DecoratorDemo\BBsDecorator;
+use Mansonwong\Designpatterndemo\DecoratorDemo\IComponent;
+use Mansonwong\Designpatterndemo\DecoratorDemo\PayDecorator;
+use Mansonwong\Designpatterndemo\DecoratorDemo\VideoDecorator;
+
+
+require_once __DIR__ . './../../vendor/autoload.php';
 
 /*
  * Client类并不是这个设计模式的一部分,
@@ -40,5 +40,4 @@ class Client
         return $component;
     }
 }
-
 $worker = new Client();
