@@ -5,7 +5,7 @@
  * Date: 2021/10/25 0025
  * Time: 18:16
  */
-namespace Mansonwong\Designpatterndemo;
+namespace Mansonwong\Designpatterndemo\FactoryDemo;
 
 class MysqlFactory implements Factory
 {

@@ -1,0 +1,83 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: WWJ 260945307@qq.com
+ * Date: 2021/10/28 0028
+ * Time: 11:22
+ */
+
+//装饰器模式是将一个对象包装起来以增强新的行为和责任.装饰器也称为包装器(类似于适配器)
+#组件对象接口
+interface IComponent
+{
+    //动态给对象添加功能
+    public function display();
+}
+//待装饰对象 如人，或汽车
+class Person implements IComponent
+{
+    protected $name;
+    public function __construct($name)
+    {
+        $this->name = $name;
+
+    }
+
+    public function display()
+    {
+        echo '装饰的'.$this->name;
+    }
+}
+#所有装饰的父类 服饰 Decorator ，需要满足维护Component的引用
+class Fushi implements IComponent
+{
+    protected $component;//用来存储装饰的对象
+    //装饰穿戴的方法
+    public function decorate(IComponent $component)
+    {
+        $this->component = $component;
+
+    }
+    public function display()
+    {
+        if (!empty($this->component))
+        $this->component->display();
+    }
+
+}
+class Pixie extends Fushi
+{
+    public function display()
+    {
+        echo "皮鞋";
+        parent::display();
+    }
+
+}
+class Waitao extends Fushi
+{
+    public function display()
+    {
+        echo "外套";
+        parent::display();
+    }
+}
+#客户端
+
+//实例化 被装饰的对象 某人
+$qiaodan = new Person('乔丹');
+
+//用服饰（包装一下）乔丹：
+//1给他穿皮鞋
+$px = new Pixie();
+$px->decorate($qiaodan);
+$px->display();
+
+echo PHP_EOL;
+
+//2给他穿皮鞋
+$wt = new Waitao();
+$wt->decorate($qiaodan);
+$wt->display();
+
+

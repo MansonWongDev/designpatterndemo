@@ -5,7 +5,7 @@
  * Date: 2021/10/20 0020
  * Time: 12:06
  */
-namespace Mansonwong\Designpatterndemo;
+namespace Mansonwong\Designpatterndemo\FactoryDemo;
 
 interface Db
 {

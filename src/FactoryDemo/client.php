@@ -7,10 +7,10 @@
  */
 
 
-use Mansonwong\Designpatterndemo\MysqlFactory;
-use Mansonwong\Designpatterndemo\PDOFactory;
+use Mansonwong\Designpatterndemo\FactoryDemo\MysqlFactory;
+use Mansonwong\Designpatterndemo\FactoryDemo\PDOFactory;
 
-require_once __DIR__ . './../vendor/autoload.php';
+require_once __DIR__ . './../../vendor/autoload.php';
 
 /************** 客户端调用 ************/
 $res = PDOFactory::createDb();
